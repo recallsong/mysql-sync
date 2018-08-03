@@ -19,8 +19,6 @@ type Pattern struct {
 	Strategy   string
 	Prefix     string
 	AutoCreate bool
-	// AllColumns bool
-	// Columns    []*Column
 }
 
 type Column struct {
@@ -83,14 +81,3 @@ func readTatget(file string) (string, *Target) {
 	log.Info("[target] read target ", name)
 	return name, t
 }
-
-// func (p *Pattern) ToColumns() string {
-// 	if len(p.Columns) <= 0 {
-// 		return ""
-// 	}
-// 	buf := &bytes.Buffer{}
-// 	for _, c := range p.Columns {
-// 		buf.WriteString("`" + c.Field + "`,")
-// 	}
-// 	return string(buf.Bytes()[0 : buf.Len()-1])
-// }
