@@ -1,0 +1,11 @@
+url: "root:123456@tcp(localhost:3306)/target?writeTimeout=3s&readTimeout=3s&timeout=3s&charset=utf8"
+patterns: # 导入模版
+    meta: # 模版名
+        strategy: "sync" # 导入策略，sync会完全同步数据，append会追加数据
+        prefix: "meta_" # 表前缀名
+        autoCreate: true # 是否自动创建表
+    logs: # 模版名
+        strategy: "append" # 导入策略，sync会完全同步数据，append会追加数据
+        prefix: "logs_" # 表前缀名
+        autoCreate: true # 是否自动创建表
+        

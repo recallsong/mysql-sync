@@ -1,0 +1,11 @@
+logs:
+    level: "INFO"
+    formatter:
+        name: "text"
+    out:
+        name: "rotatelogs"
+        options:
+            path: "logs/app.%Y%m%d%H%M.log"
+            link-name: "logs/app.log"
+            rotation-time": "86400s"
+            max-age": "7days"

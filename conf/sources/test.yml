@@ -1,0 +1,18 @@
+url: "root:123456@tcp(localhost:3306)/source?writeTimeout=3s&readTimeout=3s&timeout=3s&charset=utf8"
+target:
+  name: "default"
+  tables:
+    - table: "person" # 源数据库表名
+      pattern: "meta" # 导入模版
+      prefix: "shanjia1_" # 导入表的前缀
+    - table: "person" # 源数据库表名
+      pattern: "logs" # 导入模版
+      prefix: "shangjia1_" # 导入表的前缀
+      keys: 
+        - "id"
+    - table: "person" # 源数据库表名
+      pattern: "logs" # 导入模版
+      prefix: "shangjia2_" # 导入表的前缀
+      keys: 
+        - "id"
+        
